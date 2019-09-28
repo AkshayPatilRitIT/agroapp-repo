@@ -31,7 +31,7 @@ class OTP extends Component {
               <div className="Authentication__otp__wrapper">
                 <div className="Authentication__otp__container">
                   <div className="Authentication__otp__welcome__title">
-                    Welcome to the AgroApp
+                    Welcome
                   </div>
                   <div className="text-center mt-4">
                     We have sent OTP on your registered mobile number.
