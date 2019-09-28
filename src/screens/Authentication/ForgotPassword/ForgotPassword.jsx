@@ -1,6 +1,7 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
+// import { Link } from "react-router-dom";
 
 import { WithLogo } from "../WithLogo";
 
@@ -22,48 +23,53 @@ class ForgotPassword extends Component {
             })}
           >
             {({}) => (
-              <div className="Athentication__ForgotPassword__container">
-                <div>
-                  <div className="Athentication__ForgotPassword__welcome__title text-center">
-                    Welcome to the AgroApp
-                  </div>
-                  <div className="Athentication__ForgotPassword__subline text-center">
-                    Forgot password? we will help to reset. <br />
-                    Please enter your mobile number with which you have
-                    register.
-                  </div>
-                  <div className="Athentication__ForgotPassword__mobile__number__block mt-4">
-                    <div className="Athentication__ForgotPassword__mobile__label">
-                      <b> Mobile number </b>
+              <Form>
+                <div className="Athentication__ForgotPassword__container">
+                  <div>
+                    <div className="Athentication__ForgotPassword__welcome__title text-center">
+                      Welcome to the AgroApp
                     </div>
-                    <Field
-                      type="text"
-                      name="mobilenum"
-                      className="Athentication__ForgotPassword__mobile__field"
-                      placeholder="Enter mobile number"
-                    />
-                    <ErrorMessage
-                      name="mobilenum"
-                      className="Athentication__ForgotPassword__error__msg"
-                      component="div"
-                    />
-                  </div>
+                    <div className="Athentication__ForgotPassword__subline text-center">
+                      Forgot password? we will help to reset. <br />
+                      Please enter your mobile number with which you have
+                      register.
+                    </div>
+                    <div className="Athentication__ForgotPassword__mobile__number__block mt-4">
+                      <div>
+                        <div className="Athentication__ForgotPassword__mobile__label">
+                          <b> Mobile number </b>
+                        </div>
+                        <Field
+                          type="text"
+                          name="mobilenum"
+                          className="Athentication__ForgotPassword__mobile__field"
+                          placeholder="Enter mobile number"
+                        />
 
-                  <div className="Athentication__ForgotPassword__subline text-center">
-                    We will send OTP to given mobile number
-                    <br />
-                    Using which you can reset your password
-                  </div>
-                  <div className="Athentication__ForgotPassword__submit__btn mt-4 text-center">
-                    <button
-                      type="submit"
-                      className="btn btn-success Athentication__ForgotPassword__btn"
-                    >
-                      Send
-                    </button>
+                        <ErrorMessage
+                          name="mobilenum"
+                          className="Athentication__ForgotPassword__error__msg"
+                          component="div"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="Athentication__ForgotPassword__subline text-center mt-3">
+                      We will send OTP to given mobile number
+                      <br />
+                      Using which you can reset your password
+                    </div>
+                    <div className="Athentication__ForgotPassword__submit__btn mt-4 text-center">
+                      <button
+                        type="submit"
+                        className="btn btn-success Athentication__ForgotPassword__btn"
+                      >
+                        Send
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Form>
             )}
           </Formik>
         </div>

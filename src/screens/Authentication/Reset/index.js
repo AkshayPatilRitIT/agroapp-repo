@@ -1,3 +1,3 @@
 import Reset from "./Reset";
 
-export default Reset;
+export { Reset };

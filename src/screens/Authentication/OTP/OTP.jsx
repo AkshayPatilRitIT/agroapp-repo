@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
-
 // import { Link } from "react-router-dom";
 
 import { WithLogo } from "../WithLogo";
 
 import "./OTP.css";
 class OTP extends Component {
-  handleClickResend = () => {};
+  handleClickResend = () => {
+    this.props.history.push("/forgotpassword");
+  };
   render() {
     const mobileRegExp = /^([0]([.][0-9]+)?|[1-9]([0-9]+)?([.][0-9]+)?)$/;
     return (
@@ -29,7 +30,7 @@ class OTP extends Component {
             <Form>
               <div className="Authentication__otp__wrapper">
                 <div className="Authentication__otp__container">
-                  <div className="Authentication__otp__welcome__title ">
+                  <div className="Authentication__otp__welcome__title">
                     Welcome to the AgroApp
                   </div>
                   <div className="text-center mt-4">
@@ -54,7 +55,7 @@ class OTP extends Component {
                     </div>
                   </div>
                   <div
-                    className="mt-2 text-center"
+                    className="mt-2 text-center Authentication__otp__resend__link"
                     onClick={this.handleClickResend}
                   >
                     Resend OTP?

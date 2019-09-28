@@ -6,7 +6,7 @@
 .Athentication__login__welcome__line {
   font-size: 2.4rem;
   font-weight: bold;
-  padding: 15px;
+  padding: 0 20px;
   margin-bottom: 30px;
 }
 .Athentication__login__form {
@@ -34,6 +34,7 @@
 }
 .Athentication__login__forgot__link {
   margin-top: 20px;
+  margin-bottom: 20px;
   color: #28a745;
 }
 
